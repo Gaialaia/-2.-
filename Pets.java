@@ -7,6 +7,10 @@ public class Pets extends Animals {
         
     }
 
+    public String toString() {
+        return "Student [petId=" + super.getId() + ", type=" + super.getType() + ", gender=" + super.getGender()
+                + ", commands=" + super.getCommands() + "]";
     
-    
+    }
+
 }

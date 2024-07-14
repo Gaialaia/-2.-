@@ -63,7 +63,7 @@ abstract class Animals {
 
 
     public String toString() {
-        return "Animal [animalId=" + getId()+ ", name=" + getName() + ", type=" + super.Type()
+        return "Animal [animalId=" + getId()+ ", name=" + getName() + ", type=" + getType()
                 + ", lastname=" + getGender() +",commands=" + getCommands() + "]";
     }
 
