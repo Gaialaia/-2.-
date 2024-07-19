@@ -40,18 +40,24 @@ public class Pets extends Animals {
 
     public LocalDate getBirthdate() {
         LocalDate dob = LocalDate.parse(birthdate);
-        return getBirthdate();
+        return dob;
 
     }
        
         
+    // public String toString() {
+    //     return "[petId=" + super.getId() + ", type=" + super.getType() + ", gender=" + super.getGender()
+    //             + ", commands=" + super.getCommands() +", name of class=" + super.get_class_Name() + 
+    //             ", birthdate=" + super.getBirthdate() +"]";
+    
+    // }
+    
+
+
     public String toString() {
-        return "[petId=" + super.getId() + ", type=" + super.getType() + ", gender=" + super.getGender()
-                + ", commands=" + super.getCommands() +", name of class=" + super.get_class_Name() + 
-                ", birthdate=" + super.getBirthdate() +"]";
-    
+        return super.getId()+ "," + super.getName() + "," + super.getType() + "," + super.getGender() + 
+        "," + super.getCommands() + "," + super.get_class_Name() + ","+ getBirthdate();
     }
-    
 
     @Override
     public void setCommands(String commands) {
@@ -90,11 +96,13 @@ public class Pets extends Animals {
 
 
     @Override
-    public String setBirthdate(LocalDate bithdate) {
-        LocalDate dob = LocalDate.parse(this.birthdate);
-       super.setBirthdate(bithdate);
+    public void setBirthdate(String birthdate) {
+        super.setBirthdate(birthdate);
     }
 
+
+
+   
 
 
     

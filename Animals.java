@@ -4,10 +4,11 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Locale;
+import OOP.Counter;
 
 abstract class Animals {
 
-    public int id;
+    public static int id;
     public String name;
     private String class_name;
     public String type;
@@ -81,7 +82,7 @@ abstract class Animals {
 
     }
 
-    public void setBirthdate (String bithdate) {
+    public void setBirthdate (String birthdate) {
        this.birthdate = birthdate;
 
     }
@@ -90,17 +91,23 @@ abstract class Animals {
         this.commands = commands;
     }
 
+    public String toString() {
+        return getId() + "," + getName() + "," + getType() + ","+ getGender() + "," 
+        + getCommands() + "," + get_class_Name() + "," + getBirthdate();
+    }
+
+
   
 
    
 
 
 
-    public String toString() {
-        return "Animal [animalId=" + getId()+ ", name=" + getName() + ", type=" + getType()
-                + ", lastname=" + getGender() +",commands=" + getCommands() + 
-                ", name of class=" + get_class_Name() + ", birthdate=" + getBirthdate() + "]";
-    }
+    // public String toString() {
+    //     return "Animal [animalId=" + getId()+ ", name=" + getName() + ", type=" + getType()
+    //             + ", lastname=" + getGender() +",commands=" + getCommands() + 
+    //             ", name of class=" + get_class_Name() + ", birthdate=" + getBirthdate() + "]";
+    // }
 
 
    
