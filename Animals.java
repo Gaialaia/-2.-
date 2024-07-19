@@ -27,11 +27,9 @@ abstract class Animals {
         
     }
 
-
     public String get_class_Name() {
         this.class_name = "Pets";
         return this.getClass().getName();
-
 
     }
 
@@ -43,11 +41,6 @@ abstract class Animals {
     public String getName() {
         return name;
     }
-
-    // public String getKind() {
-    //     return kind;
-    // }
-
 
 
     public String getType(){
@@ -62,38 +55,44 @@ abstract class Animals {
         return commands;
     }
 
-    public String getBirthdate() {
+    public LocalDate getBirthdate() {
         LocalDate dob = LocalDate.parse(this.birthdate);
-        return getBirthdate();
+        return dob;
         
     }
 
 
 
 
-    public int setId () {
-        return id;
+    public void setId (int id) {
+        this.id = id;
     }
 
-    public String setName() {
-        return name;
+    public void setName (String name) {
+        this.name = name;
     }
 
-    public String setType(){
-        return type;
+    public void setType (String type){
+        this.type = type;
     }
 
-    public String setGender() {
-        return gender;
+    public void setGender(String gender) {
+        this.gender = gender;
+
     }
 
-    public String setCommands (){
-        return commands;
+    public void setBirthdate (String bithdate) {
+       this.birthdate = birthdate;
+
     }
 
-    public LocalDate setBirthdate() {
-        return birthdate; // yyyy nn dd
+    public void setCommands (String commands){
+        this.commands = commands;
     }
+
+  
+
+   
 
 
 

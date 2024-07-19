@@ -1,9 +1,11 @@
 package OOP;
 
+import java.time.LocalDate;
+
 public class PackAnimals extends Animals {
 
-    public PackAnimals(int id, String name, String type, String gender, String commands) {
-        super(id, name, type, gender, commands);
+    public PackAnimals(int id, String name, String type, String gender, String birthdate, String commands) {
+        super(id, name, type, gender, birthdate, commands);
        
     }
 
@@ -17,6 +19,14 @@ public class PackAnimals extends Animals {
     public String getGender() {
         // TODO Auto-generated method stub
         return super.getGender();
+    }
+
+    
+
+    @Override
+    public LocalDate getBirthdate() {
+        LocalDate dob = LocalDate.parse(birthdate);
+        return super.getBirthdate();
     }
 
     @Override
@@ -35,6 +45,7 @@ public class PackAnimals extends Animals {
     public String getType() {
         // TODO Auto-generated method stub
         return super.getType();
+
     }
 
     @Override
@@ -75,8 +86,9 @@ public class PackAnimals extends Animals {
 
     @Override
     public String toString() {
-        return "Animal [animalId=" + getId()+ ", name=" + getName() + ", type=" + getType()
-        + ", lastname=" + getGender() +",commands=" + getCommands() + ", name of class=" + get_class_Name() + "]";
+        return "Animal [animalId=" + super.getId()+ ", name=" + super.getName() + ", type=" + super.getType()
+        + ", lastname=" + super.getGender() +", birthdate=" + super.getBirthdate() + ",commands=" + super.getCommands() 
+        + ", name of class=" + super.get_class_Name() + "]";
     }
 
     

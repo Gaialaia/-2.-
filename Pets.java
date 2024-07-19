@@ -12,12 +12,6 @@ public class Pets extends Animals {
     }
 
 
-    public String toString() {
-        return "[petId=" + super.getId() + ", type=" + super.getType() + ", gender=" + super.getGender()
-                + ", commands=" + super.getCommands() +", name of class=" + super.get_class_Name() + 
-                ", birthdate=" + super.getBirthdate() +"]";
-    
-    }
 
     @Override
     public String getCommands() {
@@ -44,44 +38,69 @@ public class Pets extends Animals {
         return super.getType();
     }
 
-    public String getBirthdate() {
+    public LocalDate getBirthdate() {
         LocalDate dob = LocalDate.parse(birthdate);
         return getBirthdate();
+
+    }
        
         
+    public String toString() {
+        return "[petId=" + super.getId() + ", type=" + super.getType() + ", gender=" + super.getGender()
+                + ", commands=" + super.getCommands() +", name of class=" + super.get_class_Name() + 
+                ", birthdate=" + super.getBirthdate() +"]";
+    
     }
+    
 
     @Override
-    public String setCommands() {
-        return super.setCommands();
+    public void setCommands(String commands) {
+        super.setCommands(commands);
     }
+
+    
 
     @Override
-    public String setGender() {
-     
-        return super.setGender();
+    public void setId(int id) {
+        // TODO Auto-generated method stub
+        super.setId(id);
     }
+
+
 
     @Override
-    public int setId() {
-
-        return super.setId();
+    public void setType(String type) {
+        // TODO Auto-generated method stub
+        super.setType(type);
     }
 
-    @Override
-    public String setName() {
-        return super.setName();
-    }
+
 
     @Override
-    public String setType() {
-        return super.setType();
+    public void setName(String name) {
+        super.setName(name);
     }
 
+
     @Override
-    public LocalDate setBirthdate() {
-        return setBirthdate(); // yyyy nn dd
+    public void setGender(String name) {
+        super.setGender(name);
     }
+
+
+
+    @Override
+    public String setBirthdate(LocalDate bithdate) {
+        LocalDate dob = LocalDate.parse(this.birthdate);
+       super.setBirthdate(bithdate);
+    }
+
+
+
+    
+
+    
+
 
 
 };
