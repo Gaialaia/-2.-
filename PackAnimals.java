@@ -50,38 +50,38 @@ public class PackAnimals extends Animals {
 
     @Override
     public String get_class_Name() {
-        // TODO Auto-generated method stub
+        
         return super.get_class_Name();
     }
 
     @Override
-    public String setCommands() {
-        // TODO Auto-generated method stub
-        return super.setCommands();
+    public void setCommands(String commands) {
+        
+        super.setCommands(commands);
     }
 
     @Override
-    public String setGender() {
+    public void setGender(String gender) {
         // TODO Auto-generated method stub
-        return super.setGender();
+        super.setGender(gender);
     }
 
     @Override
-    public int setId() {
+    public void setId(int id) {
         // TODO Auto-generated method stub
-        return super.setId();
+        super.setId(id);
     }
 
     @Override
-    public String setName() {
+    public void setName(String name) {
         // TODO Auto-generated method stub
-        return super.setName();
+        super.setName(name);
     }
 
     @Override
-    public String setType() {
+    public void setType(String type) {
         // TODO Auto-generated method stub
-        return super.setType();
+        super.setType(type);
     }
 
     @Override
@@ -93,4 +93,6 @@ public class PackAnimals extends Animals {
 
     
     
-}
+};
+
+

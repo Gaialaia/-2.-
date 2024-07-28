@@ -1,9 +1,7 @@
 package OOP;
-
-import java.util.ArrayList;
-import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;  
+import java.io.IOException;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -12,8 +10,6 @@ public class Main {
       //  Pets pt = new Pets(0, "F", "cat", "male", "2020-02-05", "meow");
        
       //  System.out.println(pt);
-      ;
-
       //  PackAnimals pk = new PackAnimals(0, "Clover", "horse", "male", "2019-05-03", "count");
       //  System.out.println(pk);
 
@@ -24,20 +20,70 @@ public class Main {
        p2.setGender("female");
        p2.setCommands("roll over");
        p2.setBirthdate("2020-12-02");
-       System.out.println(p2.getCommands());
-       System.out.println(p2.getBirthdate());
-       System.out.println(p2);
 
+       Pets p3 = new Pets(1, "Ink", "cat", "m", "2021-08-07", "splits");
+      //  System.out.println(p2.getCommands());
+      //  System.out.println(p2.getBirthdate());
+      //  System.out.println(p2);
 
-      ArrayList<Object> registry = new ArrayList<Object>();
-      // registry.add(p2.getId());
-      registry.add(p2.toString());
-      System.out.println(registry);
+      Pets [] PetsArray =  new Pets[5];
+      PetsArray [0] = p2;
+      PetsArray [1] = p3;
 
-      File regFile = new File("/home/animal_registry.txt");
+      for (int i = 0; i < PetsArray.length; i++ ) {
+        String outputText = PetsArray[i].getName() + PetsArray[i].getType() + 
+        PetsArray[i].getGender() + PetsArray[i].getBirthdate() + 
+        PetsArray[i].getId() + PetsArray[i].getCommands() + 
+        PetsArray[i].get_class_Name();
+
+        // saveToFile("animal_registry.txt", outputText, true);
+
 
       FileWriter regWriter = new FileWriter("animal_registry.txt");
       regWriter.write(p2.toString());
+      regWriter.close();
+
+
+
+     
+
+      regWriter.write(());
+      regWriter.close();
+
+
+
+
+      }
+
+
+
+
+      
+
+
+     
+
+
+      // ArrayList<Object> registry = new ArrayList<Object>();
+      // // registry.add(p2.getId());
+      // registry.add(p2.toString());
+      // System.out.println();
+      // System.out.println(p2.toString());
+
+
+      
+
+
+
+
+
+      
+    
+
+
+      // FileWriter regWriter = new FileWriter("animal_registry.txt");
+      // regWriter.write(p2.toString());
+      // regWriter.close();
 
 
 
@@ -55,4 +101,4 @@ public class Main {
 
 
 
-}
+};

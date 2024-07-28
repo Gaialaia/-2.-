@@ -1,10 +1,7 @@
 package OOP;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Locale;
-import OOP.Counter;
+
 
 abstract class Animals {
 
@@ -95,12 +92,7 @@ abstract class Animals {
         return getId() + "," + getName() + "," + getType() + ","+ getGender() + "," 
         + getCommands() + "," + get_class_Name() + "," + getBirthdate();
     }
-
-
-  
-
-   
-
+};
 
 
     // public String toString() {
@@ -131,7 +123,7 @@ abstract class Animals {
 
 
 
-    }
+    
 
 
   
