@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 public class PackAnimals extends Animals {
 
-    public PackAnimals(int id, String name, String type, String gender, String birthdate, String commands) {
-        super(id, name, type, gender, birthdate, commands);
+    public PackAnimals(String name, String type, String gender, String birthdate, String commands) {
+        super(name, type, gender, birthdate, commands);
        
     }
 
@@ -27,12 +27,6 @@ public class PackAnimals extends Animals {
     public LocalDate getBirthdate() {
         LocalDate dob = LocalDate.parse(birthdate);
         return super.getBirthdate();
-    }
-
-    @Override
-    public int getId() {
-        // TODO Auto-generated method stub
-        return super.getId();
     }
 
     @Override
@@ -62,14 +56,7 @@ public class PackAnimals extends Animals {
 
     @Override
     public void setGender(String gender) {
-        // TODO Auto-generated method stub
         super.setGender(gender);
-    }
-
-    @Override
-    public void setId(int id) {
-        // TODO Auto-generated method stub
-        super.setId(id);
     }
 
     @Override
@@ -86,7 +73,7 @@ public class PackAnimals extends Animals {
 
     @Override
     public String toString() {
-        return "Animal [animalId=" + super.getId()+ ", name=" + super.getName() + ", type=" + super.getType()
+        return "Animal [name=" + super.getName() + ", type=" + super.getType()
         + ", lastname=" + super.getGender() +", birthdate=" + super.getBirthdate() + ",commands=" + super.getCommands() 
         + ", name of class=" + super.get_class_Name() + "]";
     }

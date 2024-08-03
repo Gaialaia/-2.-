@@ -5,18 +5,20 @@ import java.time.LocalDate;
 
 abstract class Animals {
 
-    public static int id;
+    public static int count = 0;
     public String name;
     private String class_name;
     public String type;
     public String gender;
     public String birthdate;
     public String commands;
+
+   
     
     
 
-    public Animals(int id, String name, String type, String gender, String birthdate, String commands) {
-        this.id = id;
+    public Animals(String name, String type, String gender, String birthdate, String commands) {
+        count++;
         this.name = name;
         this.type = type;
         this. gender = gender;
@@ -31,9 +33,8 @@ abstract class Animals {
 
     }
 
-
-    public int getId () {
-        return id;
+    public static int getCount() {
+        return count;
     }
 
     public String getName() {
@@ -60,12 +61,6 @@ abstract class Animals {
     }
 
 
-
-
-    public void setId (int id) {
-        this.id = id;
-    }
-
     public void setName (String name) {
         this.name = name;
     }
@@ -88,8 +83,12 @@ abstract class Animals {
         this.commands = commands;
     }
 
+    public void setCount(int count) {
+        this.count = count;
+    }
+
     public String toString() {
-        return getId() + "," + getName() + "," + getType() + ","+ getGender() + "," 
+        return getName() + "," + getType() + ","+ getGender() + "," 
         + getCommands() + "," + get_class_Name() + "," + getBirthdate();
     }
 };

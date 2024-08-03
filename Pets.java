@@ -5,8 +5,8 @@ public class Pets extends Animals {
 
    
 
-    public Pets(int id, String name, String type, String gender, String birthdate, String commands) {
-        super(id, name, type, gender, birthdate, commands);
+    public Pets(String name, String type, String gender, String birthdate, String commands) {
+        super(name, type, gender, birthdate, commands);
     
         
     }
@@ -21,11 +21,6 @@ public class Pets extends Animals {
     @Override
     public String getGender() {
         return super.getGender();
-    }
-
-    @Override
-    public int getId() {
-        return super.getId();
     }
 
     @Override
@@ -55,7 +50,7 @@ public class Pets extends Animals {
 
 
     public String toString() {
-        return super.getId()+ "," + super.getName() + "," + super.getType() + "," + super.getGender() + 
+        return super.getName() + "," + super.getType() + "," + super.getGender() + 
         "," + super.getCommands() + "," + super.get_class_Name() + ","+ getBirthdate();
     }
 
@@ -64,13 +59,6 @@ public class Pets extends Animals {
         super.setCommands(commands);
     }
 
-    
-
-    @Override
-    public void setId(int id) {
-        // TODO Auto-generated method stub
-        super.setId(id);
-    }
 
 
 
@@ -99,16 +87,6 @@ public class Pets extends Animals {
     public void setBirthdate(String birthdate) {
         super.setBirthdate(birthdate);
     }
-
-
-
-   
-
-
-    
-
-    
-
 
 
 };

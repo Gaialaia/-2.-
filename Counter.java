@@ -2,18 +2,19 @@ package OOP;
 
 public class Counter {
 
-    int counter;
+    public static int count = 0;
 
-    {
-        counter = 0;
+    public Counter() {
+        count++;
     }
 
+    public static int getCount() {
+        return count;
+    }
 
-
-public void add() {
-
-    counter++;
-}
+    public void finalize() {
+        count --;
+    }
 
 };
 
