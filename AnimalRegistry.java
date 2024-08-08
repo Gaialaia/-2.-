@@ -8,13 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.mysql.cj.util.PerVmServerConfigCacheFactory;
-
 import java.sql.SQLException;
 import java.sql.Statement;
-
-
-
 
 public class AnimalRegistry {
     public static void main(String[] args) {
@@ -126,10 +121,11 @@ public class AnimalRegistry {
                 System.out.println("Write commands: ");
                 String PackAnimalCommands = AddCommands.nextLine();
                 obj.setCommands(PackAnimalCommands);
-                PackAnimals.getCount();
+                
     
     
                     try {
+
     
                         Connection myConnection = DriverManager.getConnection(dburl, username, password);
                     
@@ -141,7 +137,7 @@ public class AnimalRegistry {
                         pa.setString(3, obj.getGender());
                         pa.setObject(4, obj.getBirthdate());
                         pa.setString(5, obj.getCommands());
-                        pa.setInt(6, PackAnimals.getCount());
+                        pa.setInt(6, Counter.getCount());
                         pa.executeUpdate();
                         pa.close();
     
@@ -152,7 +148,7 @@ public class AnimalRegistry {
     
                     }
 
-            break;
+                break;
 
             } else  {
                 System.out.println("");
@@ -190,13 +186,31 @@ public class AnimalRegistry {
 
             break;
 
-                
-
-
             case "tr":
-            break;
 
+            Scanner TrainAimal = new Scanner(System.in);
+            System.out.println("Insert an animal name you want to train: ");
+            String AnimalName = TrainAimal.next();
+            try 
             
+            (Connection db = DriverManager.getConnection(dburl, username, password);                                                                                                                
+            Statement st = db.createStatement();) {   
+            String query = "Select id, name, commands from Pets where name = " + " ' " + AnimalName + " ' ";                                                                                                                  
+            ResultSet rSet = st.executeQuery(query);                                                                                                         
+          
+            while(rSet.next()){
+                int id = rSet.getInt("id");
+                String name = rSet.getString("name");
+                String commands = rSet.getString("commands");
+                System.out.format("%s, %s, %s\n", id, name, commands);
+            }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+               
+            }
+
+            break;         
 
             case "cmd":
             try 

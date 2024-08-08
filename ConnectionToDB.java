@@ -2,7 +2,6 @@ package OOP;
 
 import java.sql.*;
 
-
     public class ConnectionToDB {
         String dburl;
         String username;
@@ -13,9 +12,7 @@ import java.sql.*;
             this.dburl = "jdbc:mysql://localhost:3306/HumanFriends";
             this.username =  "root";
             this.password = "mysql17";
-        }
-
-        
+        }      
 
     };
 

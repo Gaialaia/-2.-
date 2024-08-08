@@ -3,15 +3,11 @@ import java.time.LocalDate;
 
 public class Pets extends Animals {
 
-   
 
     public Pets(String name, String type, String gender, String birthdate, String commands) {
         super(name, type, gender, birthdate, commands);
-    
         
     }
-
-
 
     @Override
     public String getCommands() {
@@ -38,14 +34,6 @@ public class Pets extends Animals {
         return dob;
 
     }
-       
-        
-    // public String toString() {
-    //     return "[petId=" + super.getId() + ", type=" + super.getType() + ", gender=" + super.getGender()
-    //             + ", commands=" + super.getCommands() +", name of class=" + super.get_class_Name() + 
-    //             ", birthdate=" + super.getBirthdate() +"]";
-    
-    // }
     
 
 
@@ -64,7 +52,6 @@ public class Pets extends Animals {
 
     @Override
     public void setType(String type) {
-        // TODO Auto-generated method stub
         super.setType(type);
     }
 
@@ -89,4 +76,18 @@ public class Pets extends Animals {
     }
 
 
-};
+
+    @Override
+    public void setCount(int count) {
+       
+        super.setCount(count);
+    }
+
+
+   };
+
+
+    
+
+
+

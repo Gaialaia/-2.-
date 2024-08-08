@@ -10,14 +10,12 @@ public class PackAnimals extends Animals {
     }
 
     @Override
-    public String getCommands() {
-        // TODO Auto-generated method stub
+    public String getCommands() { 
         return super.getCommands();
     }
 
     @Override
     public String getGender() {
-        // TODO Auto-generated method stub
         return super.getGender();
     }
 
@@ -31,13 +29,11 @@ public class PackAnimals extends Animals {
 
     @Override
     public String getName() {
-        // TODO Auto-generated method stub
         return super.getName();
     }
 
     @Override
     public String getType() {
-        // TODO Auto-generated method stub
         return super.getType();
 
     }
@@ -67,7 +63,7 @@ public class PackAnimals extends Animals {
 
     @Override
     public void setType(String type) {
-        // TODO Auto-generated method stub
+
         super.setType(type);
     }
 

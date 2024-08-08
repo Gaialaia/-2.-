@@ -1,9 +1,11 @@
 package OOP;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 
-abstract class Animals {
+abstract class Animals implements Serializable { 
+    private static final long serialVersionUID = 1L;
 
     public static int count = 0;
     public String name;
@@ -13,9 +15,6 @@ abstract class Animals {
     public String birthdate;
     public String commands;
 
-   
-    
-    
 
     public Animals(String name, String type, String gender, String birthdate, String commands) {
         count++;
@@ -89,16 +88,11 @@ abstract class Animals {
 
     public String toString() {
         return getName() + "," + getType() + ","+ getGender() + "," 
-        + getCommands() + "," + get_class_Name() + "," + getBirthdate();
+        + getCommands() + "," + getBirthdate() + "," + get_class_Name() + "," + getCount();
     }
 };
 
 
-    // public String toString() {
-    //     return "Animal [animalId=" + getId()+ ", name=" + getName() + ", type=" + getType()
-    //             + ", lastname=" + getGender() +",commands=" + getCommands() + 
-    //             ", name of class=" + get_class_Name() + ", birthdate=" + getBirthdate() + "]";
-    // }
 
 
    
